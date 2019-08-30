@@ -1,0 +1,11 @@
+**/__pycache__/
+**/.ipynb_checkpoints/
+pcc_2e/
+
+*.pyc
+notes/
+
+*_env/
+*_env*/
+
+*.DS_Store
