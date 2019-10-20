@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>GEOG-312_Lab_06_Solutions</title>
+<title>GEOG-312_Lab_05</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13116,8 +13116,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="GEOG-312-Lab-6">GEOG-312 Lab 6<a class="anchor-link" href="#GEOG-312-Lab-6">&#182;</a></h1><p><strong>Emma Jones</strong></p>
-<p><em>Modified by Qiusheng Wu</em></p>
+<h1 id="GEOG-312-Lab-5">GEOG-312 Lab 5<a class="anchor-link" href="#GEOG-312-Lab-5">&#182;</a></h1><p><strong>Firstname Lastname</strong></p>
 
 </div>
 </div>
@@ -13125,374 +13124,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-1">Question 1<a class="anchor-link" href="#Question-1">&#182;</a></h2><p><strong>Message:</strong> Write a function called <code>display_message()</code> that prints one sentence telling everyone what you are learning about in this chapter. Call the function, and make sure the message displays correctly.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">display_message</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;We are learning about functions!&quot;</span><span class="p">)</span>
-
-<span class="n">display_message</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>We are learning about functions!
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-2">Question 2<a class="anchor-link" href="#Question-2">&#182;</a></h2><p><strong>Favorite Book:</strong> Write a function called <code>favorite_book()</code> that accepts one parameter, title. The function should print a message, such as <code>One of my favorite books is Alice in Wonderland</code>. Call the function, making sure to include a book title as an argument in the function call.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">favorite_book</span><span class="p">(</span><span class="n">title</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;My favorite book is {title.title()}&quot;</span><span class="p">)</span>
-
-<span class="n">favorite_book</span><span class="p">(</span><span class="s1">&#39;turn&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>My favorite book is Turn
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-3">Question 3<a class="anchor-link" href="#Question-3">&#182;</a></h2><p><strong>T-Shirt:</strong> Write a function called <code>make_shirt()</code> that accepts a size and the text of a message that should be printed on the shirt. The function should print a sentence summarizing the size of the shirt and the message printed on it.</p>
-<p>Call the function once using positional arguments to make a shirt. Call the function a second time using keyword arguments.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_shirt</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;The shirt is a </span><span class="si">{size}</span><span class="s2">.&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;The shirt will say &#39;</span><span class="si">{message}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
-    
-<span class="n">make_shirt</span><span class="p">(</span><span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="s1">&#39;i &lt;3 CRJ&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The shirt is a large.
-The shirt will say &#39;i &lt;3 CRJ&#39;.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_shirt</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;The shirt is a </span><span class="si">{size}</span><span class="s2">.&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;The shirt will say &#39;</span><span class="si">{message}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span>
-    
-<span class="n">make_shirt</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s1">&#39;i &lt;3 CRJ&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The shirt is a large.
-The shirt will say &#39;i &lt;3 CRJ&#39;.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-4">Question 4<a class="anchor-link" href="#Question-4">&#182;</a></h2><p><strong>Large Shirts:</strong> Modify the <code>make_shirt()</code> function so that shirts are large by default with a message that reads <em>I love Python</em>. Make a large shirt and a medium shirt with the default message, and a shirt of any size with a different message.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_shirt</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="s1">&#39;large&#39;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s1">&#39;I love Python&#39;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;The shirt is a size </span><span class="si">{size}</span><span class="s2"> and says: </span><span class="si">{message}</span><span class="s2">.&quot;</span><span class="p">)</span>
-
-<span class="n">make_shirt</span><span class="p">()</span>
-<span class="n">make_shirt</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="s1">&#39;medium&#39;</span><span class="p">)</span>
-<span class="n">make_shirt</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="s1">&#39;small&#39;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s1">&#39;Python is the best&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The shirt is a size large and says: I love Python.
-The shirt is a size medium and says: I love Python.
-The shirt is a size small and says: Python is the best.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-5">Question 5<a class="anchor-link" href="#Question-5">&#182;</a></h2><p><strong>Cities:</strong> Write a function called <code>describe_city()</code> that accepts the name of a city and its country. The function should print a simple sentence, such as <code>Reykjavik is in Iceland</code>. Give the parameter for the country a default value. Call your function for three different cities, at least one of which is not in the default country.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">describe_city</span><span class="p">(</span><span class="n">city</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="s1">&#39;spain&#39;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;{city.title()} is in {country.title()}.&quot;</span><span class="p">)</span>
-    
-<span class="n">describe_city</span><span class="p">(</span><span class="n">city</span><span class="o">=</span><span class="s1">&#39;cordoba&#39;</span><span class="p">)</span>
-<span class="n">describe_city</span><span class="p">(</span><span class="n">city</span><span class="o">=</span><span class="s1">&#39;salamanca&#39;</span><span class="p">)</span>
-<span class="n">describe_city</span><span class="p">(</span><span class="n">city</span><span class="o">=</span><span class="s1">&#39;balti&#39;</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="s1">&#39;moldova&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Cordoba is in Spain.
-Salamanca is in Spain.
-Balti is in Moldova.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-6">Question 6<a class="anchor-link" href="#Question-6">&#182;</a></h2><p><strong>City Names:</strong> Write a function called <code>city_country()</code> that takes in the name of a city and its country. The function should return a string formatted like this:</p>
-
-<pre><code>Santiago, Chile</code></pre>
-<p>Call your function with at least three city-country pairs, and print the values that are returned.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">city_country</span><span class="p">(</span><span class="n">city</span><span class="p">,</span> <span class="n">country</span><span class="p">):</span>
-    <span class="n">location</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;{city.title()}, {country.title()}&quot;</span>
-    <span class="k">return</span> <span class="n">location</span>
-
-<span class="n">destination</span> <span class="o">=</span> <span class="n">city_country</span><span class="p">(</span><span class="s1">&#39;cordoba&#39;</span><span class="p">,</span> <span class="s1">&#39;spain&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">destination</span><span class="p">)</span>
-
-<span class="n">destination</span> <span class="o">=</span> <span class="n">city_country</span><span class="p">(</span><span class="s1">&#39;salamanco&#39;</span><span class="p">,</span> <span class="s1">&#39;spain&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">destination</span><span class="p">)</span>
-
-<span class="n">destination</span> <span class="o">=</span> <span class="n">city_country</span><span class="p">(</span><span class="s1">&#39;balti&#39;</span><span class="p">,</span> <span class="s1">&#39;moldova&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">destination</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Cordoba, Spain
-Salamanco, Spain
-Balti, Moldova
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-7">Question 7<a class="anchor-link" href="#Question-7">&#182;</a></h2><p><strong>Album:</strong> Write a function called <code>make_album()</code> that builds a dictionary describing a music album. The function should take in an artist name and an album title, and it should return a dictionary containing these two pieces of information. Use the function to make three dictionaries representing different albums. Print each return value to show that the dictionaries are storing the album information correctly.</p>
-<p>Use None to add an optional parameter to make_album() that allows you to store the number of songs on an album. If the calling line includes a value for the number of songs, add that value to the album’s dictionary. Make at least one new function call that includes the number of songs on an album.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_album</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">album_title</span><span class="p">,</span> <span class="n">num_songs</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="n">album_bio</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;artist&#39;</span><span class="p">:</span> <span class="n">artist</span><span class="p">,</span> <span class="s1">&#39;album&#39;</span><span class="p">:</span> <span class="n">album_title</span><span class="p">}</span>
-    <span class="k">if</span> <span class="n">num_songs</span><span class="p">:</span>
-        <span class="n">album_bio</span><span class="p">[</span><span class="s1">&#39;# of songs&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">num_songs</span>
-    <span class="k">return</span> <span class="n">album_bio</span>
-
-<span class="n">album</span> <span class="o">=</span> <span class="n">make_album</span><span class="p">(</span><span class="s1">&#39;carly rae jepsen&#39;</span><span class="p">,</span> <span class="s1">&#39;dedicated&#39;</span><span class="p">,</span> <span class="n">num_songs</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">album</span><span class="p">)</span>
-
-<span class="n">album</span> <span class="o">=</span> <span class="n">make_album</span><span class="p">(</span><span class="s1">&#39;frank ocean&#39;</span><span class="p">,</span> <span class="s1">&#39;blonde&#39;</span><span class="p">,</span> <span class="n">num_songs</span><span class="o">=</span><span class="mi">17</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">album</span><span class="p">)</span>
-
-<span class="n">album</span> <span class="o">=</span> <span class="n">make_album</span><span class="p">(</span><span class="s1">&#39;lady gaga&#39;</span><span class="p">,</span> <span class="s1">&#39;joanne&#39;</span><span class="p">,</span> <span class="n">num_songs</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">album</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;artist&#39;: &#39;carly rae jepsen&#39;, &#39;album&#39;: &#39;dedicated&#39;, &#39;# of songs&#39;: 15}
-{&#39;artist&#39;: &#39;frank ocean&#39;, &#39;album&#39;: &#39;blonde&#39;, &#39;# of songs&#39;: 17}
-{&#39;artist&#39;: &#39;lady gaga&#39;, &#39;album&#39;: &#39;joanne&#39;, &#39;# of songs&#39;: 14}
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-8">Question 8<a class="anchor-link" href="#Question-8">&#182;</a></h2><p><strong>User Albums:</strong> Start with your program from Question 7. Write a <code>while</code> loop that allows users to enter an album’s artist and title. Once you have that information, call <code>make_album()</code> with the user’s input and print the dictionary that’s created. Be sure to include a quit value in the <code>while</code> loop.</p>
+<h2 id="Question-1">Question 1<a class="anchor-link" href="#Question-1">&#182;</a></h2><p><strong>Person:</strong> Use a dictionary to store information about a person you know. Store their first name, last name, age, and the city in which they live. You should have keys such as first_name, last_name, age, and city. Print each piece of information stored in your dictionary.</p>
 
 </div>
 </div>
@@ -13502,46 +13134,10 @@ Balti, Moldova
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_album</span><span class="p">(</span><span class="n">artist</span><span class="p">,</span> <span class="n">album_title</span><span class="p">):</span>
-    <span class="n">album_bio</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;artist&#39;</span><span class="p">:</span> <span class="n">artist</span><span class="p">,</span> <span class="s1">&#39;album&#39;</span><span class="p">:</span> <span class="n">album_title</span><span class="p">}</span>
-    <span class="k">return</span> <span class="n">album_bio</span>
-
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enter artist and album:&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;(enter &#39;done&#39; when complete)&quot;</span><span class="p">)</span>
-    
-    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Artist: &quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;done&#39;</span><span class="p">:</span>
-        <span class="k">break</span>
-        
-    <span class="n">album</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Album: &quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">album</span> <span class="o">==</span> <span class="s1">&#39;done&#39;</span><span class="p">:</span>
-        <span class="k">break</span>
-        
-    <span class="n">album_bio</span> <span class="o">=</span> <span class="n">make_album</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">album</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;You have entered the album and artist </span><span class="si">{album_bio}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Enter artist and album:
-(enter &#39;done&#39; when complete)
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13549,764 +13145,7 @@ Balti, Moldova
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-9">Question 9<a class="anchor-link" href="#Question-9">&#182;</a></h2><p><strong>Messages:</strong> Make a list containing a series of short text messages. Pass the list to a function called <code>show_messages()</code>, which prints each text message.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_msg</span><span class="p">(</span><span class="n">msgs</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">msgs</span><span class="p">:</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;</span><span class="si">{msg}</span><span class="s2">&quot;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-
-<span class="n">short_messages</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Welcome!&quot;</span><span class="p">,</span> <span class="s2">&quot;Hello!&quot;</span><span class="p">,</span> <span class="s2">&quot;How are you?&quot;</span><span class="p">]</span>
-<span class="n">print_msg</span><span class="p">(</span><span class="n">short_messages</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Welcome!
-Hello!
-How are you?
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-10">Question 10<a class="anchor-link" href="#Question-10">&#182;</a></h2><p><strong>Sending Messages:</strong> Start with a copy of your program from Question 9. Write a function called <code>send_messages()</code> that prints each text message and moves each message to a new list called <code>sent_messages</code> as it’s printed. After calling the function, print both of your lists to make sure the messages were moved correctly.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">send_messages</span><span class="p">(</span><span class="n">unsent_msgs</span><span class="p">,</span> <span class="n">sent_msgs</span><span class="p">):</span>
-    <span class="k">while</span> <span class="n">unsent_msgs</span><span class="p">:</span>
-        <span class="n">current_msg</span> <span class="o">=</span> <span class="n">unsent_msgs</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Sending message: </span><span class="si">{current_msg}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="n">sent_msgs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_msg</span><span class="p">)</span>
-        
-<span class="k">def</span> <span class="nf">show_sent_msgs</span><span class="p">(</span><span class="n">sent_msgs</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">The following messages have been sent:&quot;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">sent_msg</span> <span class="ow">in</span> <span class="n">sent_msgs</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">sent_msg</span><span class="p">)</span>
-        
-<span class="n">unsent_msgs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Welcome!&quot;</span><span class="p">,</span> <span class="s2">&quot;Hello!&quot;</span><span class="p">,</span> <span class="s2">&quot;How are you?&quot;</span><span class="p">]</span>
-<span class="n">sent_msgs</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="n">send_messages</span><span class="p">(</span><span class="n">unsent_msgs</span><span class="p">,</span> <span class="n">sent_msgs</span><span class="p">)</span>
-<span class="n">show_sent_msgs</span><span class="p">(</span><span class="n">sent_msgs</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Sending message: How are you?
-Sending message: Hello!
-Sending message: Welcome!
-
-The following messages have been sent:
-How are you?
-Hello!
-Welcome!
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-11">Question 11<a class="anchor-link" href="#Question-11">&#182;</a></h2><p><strong>Archived Messages:</strong> Start with your work from Question 10. Call the function <code>send_messages()</code> with a copy of the list of messages. After calling the function, print both of your lists to show that the original list has retained its messages.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">send_messages</span><span class="p">(</span><span class="n">unsent_msgs</span><span class="p">,</span> <span class="n">sent_msgs</span><span class="p">):</span>
-    
-    <span class="k">while</span> <span class="n">unsent_msgs</span><span class="p">:</span>
-        <span class="n">current_msg</span> <span class="o">=</span> <span class="n">unsent_msgs</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Sending message: </span><span class="si">{current_msg}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="n">sent_msgs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_msg</span><span class="p">)</span>
-        
-<span class="k">def</span> <span class="nf">show_sent_msgs</span><span class="p">(</span><span class="n">sent_msgs</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">The following messages have been sent:&quot;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">sent_msg</span> <span class="ow">in</span> <span class="n">sent_msgs</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">sent_msg</span><span class="p">)</span>
-        
-<span class="n">unsent_msgs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Welcome!&quot;</span><span class="p">,</span> <span class="s2">&quot;Hello!&quot;</span><span class="p">,</span> <span class="s2">&quot;How are you?&quot;</span><span class="p">]</span>
-<span class="n">sent_msgs</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="c1"># send_messages(unsent_msgs, sent_msgs)</span>
-<span class="c1"># show_sent_msgs(sent_msgs)</span>
-
-<span class="c1"># print(f&quot;\n{unsent_msgs}&quot;)</span>
-<span class="c1"># print(sent_msgs)</span>
-
-<span class="c1"># The following lines are added by Dr. Wu</span>
-<span class="n">send_messages</span><span class="p">(</span><span class="n">unsent_msgs</span><span class="p">[:],</span> <span class="n">sent_msgs</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">unsent_msgs</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sent_msgs</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Sending message: How are you?
-Sending message: Hello!
-Sending message: Welcome!
-[&#39;Welcome!&#39;, &#39;Hello!&#39;, &#39;How are you?&#39;]
-[&#39;How are you?&#39;, &#39;Hello!&#39;, &#39;Welcome!&#39;]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-12">Question 12<a class="anchor-link" href="#Question-12">&#182;</a></h2><p><strong>Sandwiches:</strong> Write a function that accepts a list of items a person wants on a sandwich. The function should have one parameter that collects as many items as the function call provides, and it should print a summary of the sandwich that’s being ordered. Call the function three times, using a different number of arguments each time.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_sandwich</span><span class="p">(</span><span class="o">*</span><span class="n">items</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
-    
-<span class="n">make_sandwich</span><span class="p">(</span><span class="s1">&#39;lettuce&#39;</span><span class="p">,</span> <span class="s1">&#39;tomato&#39;</span><span class="p">,</span> <span class="s1">&#39;bacon&#39;</span><span class="p">)</span>
-<span class="n">make_sandwich</span><span class="p">(</span><span class="s1">&#39;chicken&#39;</span><span class="p">,</span> <span class="s1">&#39;ranch&#39;</span><span class="p">)</span>
-<span class="n">make_sandwich</span><span class="p">(</span><span class="s1">&#39;salami&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>(&#39;lettuce&#39;, &#39;tomato&#39;, &#39;bacon&#39;)
-(&#39;chicken&#39;, &#39;ranch&#39;)
-(&#39;salami&#39;,)
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-13">Question 13<a class="anchor-link" href="#Question-13">&#182;</a></h2><p><strong>Cars:</strong> Write a function that stores information about a car in a dictionary. The function should always receive a manufacturer and a model name. It should then accept an arbitrary number of keyword arguments. Call the function with the required information and two other name-value pairs, such as a color or an optional feature. Your function should work for a call like this one:</p>
-
-<pre><code>car = make_car('subaru', 'outback', color='blue', tow_package=True)</code></pre>
-<p>Print the dictionary that’s returned to make sure all the information was stored correctly.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_car</span><span class="p">(</span><span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="o">**</span><span class="n">other</span><span class="p">):</span>
-    <span class="n">other</span><span class="p">[</span><span class="s1">&#39;make&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">make</span>
-    <span class="n">other</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model</span>
-    <span class="k">return</span> <span class="n">other</span>
-    
-<span class="n">car</span> <span class="o">=</span> <span class="n">make_car</span><span class="p">(</span><span class="s1">&#39;honda&#39;</span><span class="p">,</span> <span class="s1">&#39;fit&#39;</span><span class="p">,</span> 
-               <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lime&#39;</span><span class="p">,</span> 
-               <span class="n">bluetooth</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">car</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;color&#39;: &#39;lime&#39;, &#39;bluetooth&#39;: True, &#39;make&#39;: &#39;honda&#39;, &#39;model&#39;: &#39;fit&#39;}
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-14">Question 14<a class="anchor-link" href="#Question-14">&#182;</a></h2><p><strong>Restaurant:</strong> Make a class called <code>Restaurant</code>. The <code>__init__()</code> method for <code>Restaurant</code> should store two attributes: a <code>restaurant_name</code> and a <code>cuisine_type</code>. Make a method called <code>describe_restaurant()</code> that prints these two pieces of information, and a method called <code>open_restaurant()</code> that prints a message indicating that the restaurant is open.</p>
-<p>Make an instance called <code>restaurant</code> from your class. Print the two attributes individually, and then call both methods.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">:</span>
-    
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cuisine</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">cuisine</span> <span class="o">=</span> <span class="n">cuisine</span>
-        
-    <span class="k">def</span> <span class="nf">describe_restaurant</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{self.name}</span><span class="s2"> serves </span><span class="si">{self.cuisine}</span><span class="s2">.&quot;</span><span class="p">)</span>
-        
-    <span class="k">def</span> <span class="nf">open_restaurant</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{self.name}</span><span class="s2"> is now open!&quot;</span><span class="p">)</span>
-
-<span class="n">restaurant</span> <span class="o">=</span> <span class="n">Restaurant</span><span class="p">(</span><span class="s1">&#39;Tomato Head&#39;</span><span class="p">,</span> <span class="s1">&#39;pizza&#39;</span><span class="p">)</span>
-<span class="n">restaurant</span><span class="o">.</span><span class="n">describe_restaurant</span><span class="p">()</span>
-<span class="n">restaurant</span><span class="o">.</span><span class="n">open_restaurant</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Tomato Head serves pizza.
-Tomato Head is now open!
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-15">Question 15<a class="anchor-link" href="#Question-15">&#182;</a></h2><p><strong>Three Restaurants:</strong> Start with your class from Question 14. Create three different instances from the class, and call <code>describe_restaurant()</code> for each instance.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">restaurant</span> <span class="o">=</span> <span class="n">Restaurant</span><span class="p">(</span><span class="s1">&#39;Applebees&#39;</span><span class="p">,</span> <span class="s1">&#39;American  food&#39;</span><span class="p">)</span>
-<span class="n">restaurant</span><span class="o">.</span><span class="n">describe_restaurant</span><span class="p">()</span>
-
-<span class="n">restaurant</span> <span class="o">=</span> <span class="n">Restaurant</span><span class="p">(</span><span class="s1">&#39;Starbucks&#39;</span><span class="p">,</span> <span class="s1">&#39;drinks&#39;</span><span class="p">)</span>
-<span class="n">restaurant</span><span class="o">.</span><span class="n">describe_restaurant</span><span class="p">()</span>
-
-<span class="n">restaurant</span> <span class="o">=</span> <span class="n">Restaurant</span><span class="p">(</span><span class="s1">&#39;DGB&#39;</span><span class="p">,</span> <span class="s1">&#39;pub food&#39;</span><span class="p">)</span>
-<span class="n">restaurant</span><span class="o">.</span><span class="n">describe_restaurant</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Applebees serves American  food.
-Starbucks serves drinks.
-DGB serves pub food.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-16">Question 16<a class="anchor-link" href="#Question-16">&#182;</a></h2><p><strong>Users:</strong> Make a class called <code>User</code>. Create two attributes called <code>first_name</code> and <code>last_name</code>, and then create several other attributes that are typically stored in a user profile. Make a method called <code>describe_user()</code> that prints a summary of the user’s information. Make another method called <code>greet_user()</code> that prints a personalized greeting to the user.</p>
-<p>Create several instances representing different users, and call both methods for each user.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
-    
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">first_name</span> <span class="o">=</span> <span class="n">first_name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">last_name</span> <span class="o">=</span> <span class="n">last_name</span>
-        
-    <span class="k">def</span> <span class="nf">describe_user</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;User info: {self.first_name.title()} {self.last_name.title()}&quot;</span><span class="p">)</span>
-        
-    <span class="k">def</span> <span class="nf">greet_user</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Welcome, {self.first_name.title()} {self.last_name.title()}!&quot;</span><span class="p">)</span>
-
-<span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s1">&#39;emma&#39;</span><span class="p">,</span> <span class="s1">&#39;jones&#39;</span><span class="p">)</span>
-<span class="n">user</span><span class="o">.</span><span class="n">describe_user</span><span class="p">()</span>
-<span class="n">user</span><span class="o">.</span><span class="n">greet_user</span><span class="p">()</span>
-    
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>User info: Emma Jones
-Welcome, Emma Jones!
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-17">Question 17<a class="anchor-link" href="#Question-17">&#182;</a></h2><p><strong>Number Served:</strong> Start with your program from Question 14. Add an attribute called <code>number_served</code> with a default value of 0. Create an instance called <code>restaurant</code> from this class. Print the number of customers the restaurant has served, and then change this value and print it again.</p>
-<p>Add a method called <code>set_number_served()</code> that lets you set the number of customers that have been served. Call this method with a new number and print the value again.</p>
-<p>Add a method called <code>increment_number_served()</code> that lets you increment the number of customers who’ve been served.</p>
-<p>Call this method with any number you like that could represent how many customers were served in, say, a day of business.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Restaurant</span><span class="p">:</span>
-    
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cuisine</span><span class="p">,</span> <span class="n">number_served</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">cuisine</span> <span class="o">=</span> <span class="n">cuisine</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">number_served</span> <span class="o">=</span> <span class="mi">0</span>
-        
-    <span class="k">def</span> <span class="nf">set_number_served</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="si">{self.number_served}</span><span class="s2"> customers served!&quot;</span><span class="p">)</span>
-        
-    <span class="k">def</span> <span class="nf">increment_number_served</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">customers</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">customers</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_served</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">number_served</span> <span class="o">=</span> <span class="n">customers</span>
-
-<span class="n">restaurant</span> <span class="o">=</span> <span class="n">Restaurant</span><span class="p">(</span><span class="s1">&#39;Tomato Head&#39;</span><span class="p">,</span> <span class="s1">&#39;pizza&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-
-<span class="n">restaurant</span><span class="o">.</span><span class="n">increment_number_served</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">restaurant</span><span class="o">.</span><span class="n">set_number_served</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>20 customers served!
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-18">Question 18<a class="anchor-link" href="#Question-18">&#182;</a></h2><p><strong>Login Attempts:</strong> Add an attribute called login_attempts to your User class from Question 16. Write a method called <code>increment_login_attempts()</code> that increments the value of <code>login_attempts</code> by 1. Write another method called <code>reset_login_attempts()</code> that resets the value of login_attempts to 0.</p>
-<p>Make an instance of the <code>User</code> class and call <code>increment_login_attempts()</code> several times. Print the value of <code>login_attempts</code> to make sure it was incremented properly, and then call <code>reset_login_attempts()</code>. Print <code>login_attempts</code> again to make sure it was reset to 0.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
-      
-    <span class="n">login_attempts</span> <span class="o">=</span> <span class="mi">0</span>
-    
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">login_attempts</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">=</span> <span class="n">login_attempts</span>    
-   
-    <span class="k">def</span> <span class="nf">increment_login_attempts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">+=</span> <span class="mi">1</span>
-        
-    <span class="k">def</span> <span class="nf">reset_login_attempts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="c1">#         self.login_attempts -= 1</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">login_attempts</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># This line was added by Dr. Wu</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="n">user</span><span class="o">.</span><span class="n">increment_login_attempts</span><span class="p">()</span>
-<span class="n">user</span><span class="o">.</span><span class="n">login_attempts</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[32]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">user</span><span class="o">.</span><span class="n">reset_login_attempts</span><span class="p">()</span>
-<span class="n">user</span><span class="o">.</span><span class="n">login_attempts</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[33]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-19">Question 19<a class="anchor-link" href="#Question-19">&#182;</a></h2><p><strong>Dice:</strong> Make a class <code>Die</code> with one attribute called <code>sides</code>, which has a default value of 6. Write a method called <code>roll_die()</code> that prints a random number between 1 and the number of sides the die has. Make a 6-sided die and roll it 10 times.</p>
-<p>Make a 10-sided die and a 20-sided die. Roll each die 10 times.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">randint</span>
-
-<span class="k">class</span> <span class="nc">Die</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sides</span> <span class="o">=</span> <span class="mi">6</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sides</span> <span class="o">=</span> <span class="n">sides</span>
-
-    <span class="k">def</span> <span class="nf">die_roll</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sides</span><span class="p">))</span>
-        
-<span class="k">for</span> <span class="n">die</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="n">die</span> <span class="o">=</span> <span class="n">Die</span><span class="p">()</span>
-        <span class="n">die</span><span class="o">.</span><span class="n">die_roll</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>3
-4
-6
-3
-3
-1
-3
-2
-2
-2
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">randint</span>
-
-<span class="k">class</span> <span class="nc">Die</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sides</span> <span class="o">=</span> <span class="mi">10</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sides</span> <span class="o">=</span> <span class="n">sides</span>
-
-    <span class="k">def</span> <span class="nf">die_roll</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sides</span><span class="p">))</span>
-        
-<span class="k">for</span> <span class="n">die</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="n">die</span> <span class="o">=</span> <span class="n">Die</span><span class="p">()</span>
-        <span class="n">die</span><span class="o">.</span><span class="n">die_roll</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>10
-9
-8
-9
-6
-10
-1
-6
-9
-8
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">randint</span>
-
-<span class="k">class</span> <span class="nc">Die</span><span class="p">():</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sides</span> <span class="o">=</span> <span class="mi">20</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sides</span> <span class="o">=</span> <span class="n">sides</span>
-
-    <span class="k">def</span> <span class="nf">die_roll</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sides</span><span class="p">))</span>
-        
-<span class="k">for</span> <span class="n">die</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="n">die</span> <span class="o">=</span> <span class="n">Die</span><span class="p">()</span>
-        <span class="n">die</span><span class="o">.</span><span class="n">die_roll</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>14
-10
-9
-8
-5
-13
-4
-4
-14
-15
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Question-20">Question 20<a class="anchor-link" href="#Question-20">&#182;</a></h2><p><strong>Lottery:</strong> Make a list or tuple containing a series of 10 numbers and five letters. Randomly select four numbers or letters from the list and print a message saying that any ticket matching these four numbers or letters wins a prize.</p>
-<p>You can use a loop to see how hard it might be to win the kind of lottery you just modeled. Make a list or tuple called <code>my_ticket</code>. Write a loop that keeps pulling numbers until your ticket wins. Print a message reporting how many times the loop had to run to give you a winning ticket.</p>
+<h2 id="Question-2">Question 2<a class="anchor-link" href="#Question-2">&#182;</a></h2><p><strong>Favorite Numbers:</strong> Use a dictionary to store people’s favorite numbers. Think of five names, and use them as keys in your dictionary. Think of a favorite number for each person, and store each as a value in your dictionary. Print each person’s name and their favorite number. For even more fun, poll a few friends and get some actual data for your program.</p>
 
 </div>
 </div>
@@ -14316,131 +13155,433 @@ Welcome, Emma Jones!
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">choice</span>
-<span class="n">lottery</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">]</span>
-
-
-<span class="c1"># my_ticket = input(&quot;Please enter 4 characters:&quot;)</span>
-    
-<span class="c1"># lotto = choice(lottery), choice(lottery), choice(lottery), choice(lottery)</span>
-<span class="c1"># print(&quot;The winning lottery is: &quot;, lotto)</span>
-
-<span class="c1"># if my_ticket == lotto:</span>
-<span class="c1">#     print(&quot;You win!&quot;)Q20: -1</span>
-<span class="c1"># else:</span>
-<span class="c1">#     print(&quot;Try again!&quot;)</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-3">Question 3<a class="anchor-link" href="#Question-3">&#182;</a></h2><p><strong>Glossary:</strong> A Python dictionary can be used to model an actual dictionary. However, to avoid confusion, let’s call it a glossary.</p>
+<ul>
+<li>Think of five programming words you’ve learned about in the previous chapters. Use these words as the keys in your glossary, and store their meanings as values.</li>
+<li>Print each word and its meaning as neatly formatted output. You might print the word followed by a colon and then its meaning, or print the word on one line and then print its meaning indented on a second line. Use the newline character (\n) to insert a blank line between each word-meaning pair in your output.</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The following lines are added by Dr. Wu</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">choice</span>
-<span class="n">lottery</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;9&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">]</span>
-<span class="n">secret</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
-    <span class="n">secret</span> <span class="o">+=</span> <span class="n">choice</span><span class="p">(</span><span class="n">lottery</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;The secket is: </span><span class="si">{secret}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">ticket</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your ticket: (enter quit to end the program)&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">ticket</span> <span class="o">==</span> <span class="s1">&#39;quit&#39;</span><span class="p">:</span>
-        <span class="k">break</span>
-    <span class="k">elif</span> <span class="n">ticket</span> <span class="o">==</span> <span class="n">secret</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You win!&quot;</span><span class="p">)</span>
-        <span class="k">break</span>
-    <span class="k">else</span><span class="p">:</span> 
-        <span class="k">continue</span>    
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The secket is: 6i55
-Please enter your ticket: (enter quit to end the program)adsf
-Please enter your ticket: (enter quit to end the program)dfg
-Please enter your ticket: (enter quit to end the program)rtr
-Please enter your ticket: (enter quit to end the program)sdfg
-Please enter your ticket: (enter quit to end the program)sfgf
-Please enter your ticket: (enter quit to end the program)ere
-Please enter your ticket: (enter quit to end the program)6i55
-You win!
-</pre>
 </div>
-</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-4">Question 4<a class="anchor-link" href="#Question-4">&#182;</a></h2><p><strong>Glossary 2:</strong> Now that you know how to loop through a dictionary, clean up the code from Question 3 by replacing your series of print() calls with a loop that runs through the dictionary’s keys and values. When you’re sure that your loop works, add five more Python terms to your glossary. When you run your program again, these new words and meanings should automatically be included in the output.</p>
 
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Solution 2</span>
-<span class="c1"># The following lines are added by Dr. Wu</span>
-<span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">choice</span>
-<span class="n">lottery</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;9&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">]</span>
-
-<span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">lottery</span><span class="p">)</span>
-<span class="n">secret</span> <span class="o">=</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lottery</span><span class="p">[:</span><span class="mi">4</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;The secket is: </span><span class="si">{secret}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">ticket</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your ticket: (enter quit to end the program)&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">ticket</span> <span class="o">==</span> <span class="s1">&#39;quit&#39;</span><span class="p">:</span>
-        <span class="k">break</span>
-    <span class="k">elif</span> <span class="n">ticket</span> <span class="o">==</span> <span class="n">secret</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You win!&quot;</span><span class="p">)</span>
-        <span class="k">break</span>
-    <span class="k">else</span><span class="p">:</span> 
-        <span class="k">continue</span> 
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-5">Question 5<a class="anchor-link" href="#Question-5">&#182;</a></h2><p><strong>Rivers:</strong> Make a dictionary containing three major rivers and the country each river runs through. One key-value pair might be 'nile': 'egypt'.</p>
+<ul>
+<li>Use a loop to print a sentence about each river, such as <em>The Nile runs through Egypt.</em></li>
+<li>Use a loop to print the name of each river included in the dictionary.</li>
+<li>Use a loop to print the name of each country included in the dictionary.</li>
+</ul>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The secket is: 395u
-Please enter your ticket: (enter quit to end the program)dfdfd
-Please enter your ticket: (enter quit to end the program)fgr
-Please enter your ticket: (enter quit to end the program)cvd
-Please enter your ticket: (enter quit to end the program)395u
-You win!
-</pre>
+    </div>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-6">Question 6<a class="anchor-link" href="#Question-6">&#182;</a></h2><p><strong>Polling:</strong> Based on the dictionary below (i.e., favorite_languages):</p>
+<ul>
+<li>Make a list of people who should take the favorite languages poll. Include some names that are already in the dictionary and some that are not.</li>
+<li>Loop through the list of people who should take the poll. If they have already taken the poll, print a message thanking them for responding. If they have not yet taken the poll, print a message inviting them to take the poll.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">favorite_languages</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;jen&#39;</span><span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sarah&#39;</span><span class="p">:</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;edward&#39;</span><span class="p">:</span> <span class="s1">&#39;ruby&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;phil&#39;</span><span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-7">Question 7<a class="anchor-link" href="#Question-7">&#182;</a></h2><p><strong>People:</strong> Start with the program you wrote for Question 1. Make two new dictionaries representing different people, and store all three dictionaries in a list called <code>people</code>. Loop through your list of people. As you loop through the list, print everything you know about each person.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-8">Question 8<a class="anchor-link" href="#Question-8">&#182;</a></h2><p><strong>Pets:</strong> Make several dictionaries, where each dictionary represents a different pet. In each dictionary, include the kind of animal and the owner’s name. Store these dictionaries in a list called <code>pets</code>. Next, loop through your list and as you do, print everything you know about each pet.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-9">Question 9<a class="anchor-link" href="#Question-9">&#182;</a></h2><p><strong>Favorite Places:</strong> Make a dictionary called <code>favorite_places</code>. Think of three names to use as keys in the dictionary, and store one to three favorite places for each person. To make this exercise a bit more interesting, ask some friends to name a few of their favorite places. Loop through the dictionary, and print each person’s name and their favorite places.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-10">Question 10<a class="anchor-link" href="#Question-10">&#182;</a></h2><p><strong>Favorite Numbers:</strong> Modify your program from Question 2 so each person can have more than one favorite number. Then print each person’s name along with their favorite numbers.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-11">Question 11<a class="anchor-link" href="#Question-11">&#182;</a></h2><p><strong>Cities:</strong> Make a dictionary called <code>cities</code>. Use the names of three cities as keys in your dictionary. Create a dictionary of information about each city and include the country that the city is in, its approximate population, and one fact about that city. The keys for each city’s dictionary should be something like <code>country</code>, <code>population</code>, and <code>fact</code>. Print the name of each city and all of the information you have stored about it.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-12">Question 12<a class="anchor-link" href="#Question-12">&#182;</a></h2><p><strong>Extensions:</strong> We’re now working with examples that are complex enough that they can be extended in any number of ways. Use one of the example programs from this chapter, and extend it by adding new keys and values, changing the context of the program or improving the formatting of the output.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-13">Question 13<a class="anchor-link" href="#Question-13">&#182;</a></h2><p><strong>Rental Car:</strong> Write a program that asks the user what kind of rental car they would like. Print a message about that car, such as “Let me see if I can find you a Subaru.”</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-14">Question 14<a class="anchor-link" href="#Question-14">&#182;</a></h2><p><strong>Restaurant Seating:</strong> Write a program that asks the user how many people are in their dinner group. If the answer is more than eight, print a message saying they’ll have to wait for a table. Otherwise, report that their table is ready.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-15">Question 15<a class="anchor-link" href="#Question-15">&#182;</a></h2><p><strong>Multiples of Ten:</strong> Ask the user for a number, and then report whether the number is a multiple of 10 or not.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-16">Question 16<a class="anchor-link" href="#Question-16">&#182;</a></h2><p><strong>Pizza Toppings:</strong> Write a loop that prompts the user to enter a series of pizza toppings until they enter a 'quit' value. As they enter each topping, print a message saying you’ll add that topping to their pizza.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-17">Question 17<a class="anchor-link" href="#Question-17">&#182;</a></h2><p><strong>Movie Tickets:</strong> A movie theater charges different ticket prices depending on a person’s age. If a person is under the age of 3, the ticket is free; if they are between 3 and 12, the ticket is \$10; and if they are over age 12, the ticket is $15. Write a loop in which you ask users their age, and then tell them the cost of their movie ticket.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-18">Question 18<a class="anchor-link" href="#Question-18">&#182;</a></h2><p><strong>Three Exits:</strong> Write different versions of either Question 16 or Question 17 that do each of the following at least once:</p>
+<ul>
+<li>Use a conditional test in the while statement to stop the loop.</li>
+<li>Use an active variable to control how long the loop runs.</li>
+<li>Use a break statement to exit the loop when the user enters a 'quit' value.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-19">Question 19<a class="anchor-link" href="#Question-19">&#182;</a></h2><p><strong>Deli:</strong> Make a list called <code>sandwich_orders</code> and fill it with the names of various sandwiches. Then make an empty list called <code>finished_sandwiches</code>. Loop through the list of sandwich orders and print a message for each order, such as <code>I made your tuna sandwich</code>. As each sandwich is made, move it to the list of finished sandwiches. After all the sandwiches have been made, print a message listing each sandwich that was made.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-20">Question 20<a class="anchor-link" href="#Question-20">&#182;</a></h2><p><strong>No Pastrami:</strong> Using the list <code>sandwich_orders</code> from Question 19, make sure the sandwich <code>pastrami</code> appears in the list at least three times. Add code near the beginning of your program to print a message saying the deli has run out of pastrami, and then use a <code>while</code> loop to remove all occurrences of <code>pastrami</code> from <code>sandwich_orders</code>. Make sure no pastrami sandwiches end up in <code>finished_sandwiches</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Question-21">Question 21<a class="anchor-link" href="#Question-21">&#182;</a></h2><p><strong>Dream Vacation:</strong> Write a program that polls users about their dream vacation. Write a prompt similar to <em>If you could visit one place in the world, where would you go?</em> Include a block of code that prints the results of the poll.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 

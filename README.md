@@ -16,9 +16,10 @@ First Steps in GIS Programming
 
 ## Labs
 
-* [Lab 01](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_01_Solutions.html)
-* [Lab 02](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_02_Solutions.html)
-* [Lab 03](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_03_Solutions.html)
-* [Lab 04](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_04_Solutions.html)
-* [Lab 05](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_05_Solutions.html)
-* [Lab 06](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_06_Solutions.html)
+* [Lab 01](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_01.html)
+* [Lab 02](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_02.html)
+* [Lab 03](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_03.html)
+* [Lab 04](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_04.html)
+* [Lab 05](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_05.html)
+* [Lab 06](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_06.html)
+* [Lab 07](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_06.html)
