@@ -4,6 +4,7 @@ First Steps in GIS Programming
 
 ## Lectures
 
+* [Lecture 01 - Introducing Syllabus](https://gishub.org/geog-312)
 * [Lecture 02 - Variables and Data Types](https://giswqs.github.io/geog-312/html/GEOG-312_Lecture_02_Variables_Data_Types.html)
 * [Lecture 03 - Introducing Lists](https://giswqs.github.io/geog-312/html/GEOG-312_Lecture_03_Introducing_Lists.html)
 * [Lecture 04 - Working With Lists](https://giswqs.github.io/geog-312/html/GEOG-312_Lecture_04_Working_With_Lists.html)
@@ -22,4 +23,4 @@ First Steps in GIS Programming
 * [Lab 04](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_04.html)
 * [Lab 05](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_05.html)
 * [Lab 06](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_06.html)
-* [Lab 07](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_06.html)
+* [Lab 07](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_07.html)
