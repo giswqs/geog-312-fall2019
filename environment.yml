@@ -1,0 +1,10 @@
+# run: conda env create -f environment.yml
+name: arcgis
+dependencies:
+  - python=2.7.16 
+  - numpy=1.9.3
+  - notebook
+  - ipykernel
+  - pip
+  - pip:
+    - archook
