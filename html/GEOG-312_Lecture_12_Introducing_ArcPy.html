@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>GEOG-312_Lecture_11_Setting_Up_ArcPy</title>
+<title>GEOG-312_Lecture_12_Introducing_ArcPy</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13077,25 +13077,12 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Lecture-11---Setting-Up-ArcPy-on-Apps@UT">Lecture 11 - Setting Up ArcPy on Apps@UT<a class="anchor-link" href="#Lecture-11---Setting-Up-ArcPy-on-Apps@UT">&#182;</a></h1><ul>
+<h1 id="Lecture-12---Introducting-ArcPy">Lecture 12 - Introducting ArcPy<a class="anchor-link" href="#Lecture-12---Introducting-ArcPy">&#182;</a></h1><ul>
 <li>Website: <a href="https://gishub.org/geog-312">https://gishub.org/geog-312</a>  </li>
 <li>Instructor: <a href="https://wetlands.io">Qiusheng Wu</a></li>
 <li><a href="http://bit.ly/34embJh">Jupyter Notebook Tips and Tricks</a></li>
 <li><a href="http://bit.ly/2UkNVXV">Markdown Cheatsheet</a></li>
 <li>Magic command to list all variables: <code>%whos</code></li>
-</ul>
-<h2 id="Steps">Steps<a class="anchor-link" href="#Steps">&#182;</a></h2><ul>
-<li><a href="https://apps.utk.edu/vpn/index.html">Access Apps@UT</a> and login with your NetID and password</li>
-<li>Click <strong>ArcMap 10.7</strong> from the Apps list</li>
-<li>ArcMap -- File -- Open</li>
-<li>Select any folder in the popup dialogue and right click and select <strong>Open in new window</strong></li>
-<li>Type <strong>cmd</strong> into the Windows Explorer Address Bar and hit Enter</li>
-<li>Type <strong>start iexplore</strong> into the Command Prompt and hit Enter</li>
-<li>Type <a href="https://arcgis.me/vscode">https://arcgis.me/vscode</a> into IE11 and hit Enter</li>
-<li>Select ‘Save as’ and navigate to <strong>H:\</strong> drive and save the file</li>
-<li>Double click the downloaded exe to install it. Make sure you change the default installation directory from * ‘C:\portapps\vscode-portable’ to <strong>H:\vscode-portable</strong></li>
-<li>Navigate to H:\vscode-portable and double click <strong>vscode-portable</strong> to launch it</li>
-<li>Install the Python extension for Visual Studio Code</li>
 </ul>
 
 </div>
@@ -13104,22 +13091,26 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="How-to-configure-Jupyter-Notebook-for-ArcGIS?">How to configure Jupyter Notebook for ArcGIS?<a class="anchor-link" href="#How-to-configure-Jupyter-Notebook-for-ArcGIS?">&#182;</a></h1><ul>
-<li>Download Anaconda <strong>32-bit</strong> Python 3.7 version (<a href="https://www.anaconda.com/download/#windows">https://www.anaconda.com/download/#windows</a>)</li>
-<li>Install Anaconda 32-bit to <strong>C:\Anaconda3</strong></li>
-<li>Add Anaconda to Windows system PATH (Control Panel - System and Security - System - Advanced system settings - Advanced Tab - Environment Variables - System variables -  Double click Path variable - New - Add C:\Anaconda3\Scripts to Path variable) - OK</li>
-<li>Open ArcGIS Python Windows (ArcMap -- Geoprocessing -- Python)</li>
-<li>To find out the versions of Python and relevant packages ArcGIS is using, enter the following commands in the Python Window. Alternatively, you can go to this <a href="https://support.esri.com/en/technical-article/000013224">webpage</a> to check the Python and numpy version for your ArcGIS Desktop. Record the version numbers for Python and numpy.</li>
-<li><code>import sys, numpy
-print(sys.version, numpy.__version__)</code></li>
-<li>Windows 10 Start Menu -- Anaconda3 (32-bit) -- Anaconda Prompt</li>
-<li>conda create -n arcgis python=2.7.16 numpy=1.9.3  </li>
-<li>conda activate arcgis</li>
-<li>conda install notebook ipykernel</li>
-<li>pip install archook</li>
-<li>ipython kernel install --user --name="arcgis"</li>
-<li>Windows 10 Start Menu -- Anaconda3 (32-bit) -- Jupyter Notebook (arcgis)</li>
-<li>Run the following Python script to Jupyter Notebook and run the script to see if you get any errors.  </li>
+<h2 id="Data">Data<a class="anchor-link" href="#Data">&#182;</a></h2><ul>
+<li><a href="https://github.com/giswqs/geog-312/raw/gh-pages/Lectures/data/lecture11_data.zip">https://github.com/giswqs/geog-312/raw/gh-pages/Lectures/data/lecture11_data.zip</a></li>
+</ul>
+<h2 id="What-is-ArcPy">What is ArcPy<a class="anchor-link" href="#What-is-ArcPy">&#182;</a></h2><p><a href="http://desktop.arcgis.com/en/arcmap/latest/analyze/arcpy/what-is-arcpy-.htm">http://desktop.arcgis.com/en/arcmap/latest/analyze/arcpy/what-is-arcpy-.htm</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>ArcPy was introduced with ArcGIS 10.0</li>
+<li>ArcPy is a collection of modules, classes and functions which give access to all the geoprocessing tools in ArcGIS from within Python</li>
+<li><p>Most geoprocessing scripts will start with: <strong>import arcpy</strong></p>
+</li>
+<li><p>Note: ArcPy replaces the older arcgisscripting module</p>
+</li>
+<li><p>ArcPy package can be found in  <em><strong>C:\Python27\ArcGIS10.x\Lib\site-packages</strong></em></p>
+</li>
 </ul>
 
 </div>
@@ -13143,16 +13134,35 @@ print(sys.version, numpy.__version__)</code></li>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><a href="http://desktop.arcgis.com/en/arcmap/latest/analyze/arcpy-functions/alphabetical-list-of-arcpy-functions.htm">Alphabetical list of ArcPy functions</a></li>
+<li><a href="http://desktop.arcgis.com/en/arcmap/latest/analyze/arcpy-classes/alphabetical-list-of-arcpy-classes.htm">Alphabetical list of ArcPy classes</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Setting-Current-Workspace">Setting Current Workspace<a class="anchor-link" href="#Setting-Current-Workspace">&#182;</a></h2><p><strong>After importing ArcPy, most scripts start with setting a workspace to retrieve and store files</strong></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">GetInstallInfo</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
-    <span class="c1"># Print a formatted string of the install key and its value</span>
-    <span class="c1">#</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;{:&lt;13} : {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="k">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+
+<span class="n">data_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data_dir</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13169,17 +13179,8 @@ print(sys.version, numpy.__version__)</code></li>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>SourceDir     : C:\Users\Qiusheng\Documents\ArcGIS 10.7.1\Desktop\SetupFiles\
-InstallDate   : 8/28/2019
-InstallDir    : c:\program files (x86)\arcgis\desktop10.7\
-ProductName   : Desktop
-BuildNumber   : 11595
-InstallType   : N/A
-Version       : 10.7.1
-SPNumber      : N/A
-Installer     : Qiusheng
-SPBuild       : N/A
-InstallTime   : 14:28:13
+<pre>C:\Users\Qiusheng\Documents\GEOG-312\Lectures
+C:\Users\Qiusheng\Documents\GEOG-312\Lectures\data
 </pre>
 </div>
 </div>
@@ -13193,7 +13194,473 @@ InstallTime   : 14:28:13
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">arcpy</span><span class="o">.</span><span class="n">GetInstallInfo</span><span class="p">()[</span><span class="s1">&#39;Version&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># import arcpy</span>
+<span class="c1"># arcpy.env.workspace = r&quot;C:\Geog503\data&quot;</span>
+<span class="c1"># arcpy.env.workspace = &quot;C:/Geog503/data&quot;</span>
+<span class="c1"># arcpy.env.workspace = &quot;C:\\Geog503\\data&quot;</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">workspace</span> <span class="o">=</span> <span class="n">data_dir</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>In the code above env is a class and workspace is a property of this class</strong></p>
+<p>arcpy.&lt; class&gt;.&lt; property&gt;</p>
+<p><a href="http://desktop.arcgis.com/en/arcmap/latest/analyze/arcpy-classes/env.htm">ArcPy env properties</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">arcpy</span><span class="o">.</span><span class="n">ListWorkspaces</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[u&#39;C:\\Users\\Qiusheng\\Documents\\GEOG-312\\Lectures\\data\\Results&#39;,
+ u&#39;C:\\Users\\Qiusheng\\Documents\\GEOG-312\\Lectures\\data\\toolbox&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">arcpy</span><span class="o">.</span><span class="n">ListFeatureClasses</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[u&#39;bike_routes.shp&#39;,
+ u&#39;facilities.shp&#39;,
+ u&#39;hospitals.shp&#39;,
+ u&#39;parks.shp&#39;,
+ u&#39;zip.shp&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Import-Modules">Import Modules<a class="anchor-link" href="#Import-Modules">&#182;</a></h2><p><strong>Import only a portion of a module</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">arcpy</span> <span class="kn">import</span> <span class="n">env</span>
+<span class="n">data_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="n">env</span><span class="o">.</span><span class="n">workspace</span> <span class="o">=</span> <span class="n">data_dir</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Give a module a custom name</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">arcpy</span> <span class="kn">import</span> <span class="n">env</span> <span class="k">as</span> <span class="n">myenv</span>
+<span class="n">data_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="n">myenv</span><span class="o">.</span><span class="n">workspace</span> <span class="o">=</span> <span class="n">data_dir</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Import a module directly into the namespace</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">data_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="n">workspace</span> <span class="o">=</span> <span class="n">data_dir</span>
+<span class="kn">from</span> <span class="nn">arcpy.sa</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Using-Tools">Using Tools<a class="anchor-link" href="#Using-Tools">&#182;</a></h2><p>ArcPy gives you access to all tools in ArcToolbox
+All tools are provided as functions</p>
+<p>arcpy.&lt; toolname_toolboxalias&gt;(&lt; parameters&gt;)</p>
+<p>arcpy.&lt; toolboxalias&gt;.&lt; toolname&gt;(&lt; parameters&gt;)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">arcpy</span> 
+<span class="n">data_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">workspace</span> <span class="o">=</span> <span class="n">data_dir</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">overwriteOutput</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">Clip_analysis</span><span class="p">(</span><span class="s2">&quot;bike_routes.shp&quot;</span><span class="p">,</span><span class="s2">&quot;zip.shp&quot;</span><span class="p">,</span><span class="s2">&quot;Results/routes_clip.shp&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;Result &#39;C:\\Users\\Qiusheng\\Documents\\GEOG-312\\Lectures\\data\\Results\\routes_clip.shp&#39;&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">overwriteOutput</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">Clip</span><span class="p">(</span><span class="s2">&quot;bike_routes.shp&quot;</span><span class="p">,</span><span class="s2">&quot;zip.shp&quot;</span><span class="p">,</span><span class="s2">&quot;Results/routes_clip.shp&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;Result &#39;C:\\Users\\Qiusheng\\Documents\\GEOG-312\\Lectures\\data\\Results\\routes_clip.shp&#39;&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Tool-Parameters">Tool Parameters<a class="anchor-link" href="#Tool-Parameters">&#182;</a></h2><ul>
+<li>A good understanding of tool parameters is essential</li>
+<li>Parameters have properties:<ul>
+<li>Name</li>
+<li>Type (feature class, integer, etc.)</li>
+<li>Direction (input or output)</li>
+<li>Required or optional</li>
+</ul>
+</li>
+<li>Required tool parameters are listed first</li>
+<li>Optional tool parameters can be left out<ul>
+<li>But what if some need to be set?</li>
+</ul>
+</li>
+<li>It can be accomplished in the following ways:<ul>
+<li>By setting the optional parameters using an empty string ( "" ) or the number sign ( "#" )</li>
+<li>By specifying by name the parameter that needs to be set, bypassing all others</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">arcpy</span><span class="o">.</span><span class="n">Buffer_analysis</span><span class="p">(</span><span class="s2">&quot;hospitals.shp&quot;</span><span class="p">,</span><span class="s2">&quot;Results/buffer.shp&quot;</span><span class="p">,</span><span class="s2">&quot;1000 FEET&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;Result &#39;C:\\Users\\Qiusheng\\Documents\\GEOG-312\\Lectures\\data\\Results\\buffer.shp&#39;&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">arcpy</span><span class="o">.</span><span class="n">Buffer_analysis</span><span class="p">(</span><span class="s2">&quot;hospitals.shp&quot;</span><span class="p">,</span><span class="s2">&quot;Results/buffer2.shp&quot;</span><span class="p">,</span><span class="s2">&quot;1000 FEET&quot;</span><span class="p">,</span> <span class="n">dissolve_option</span><span class="o">=</span><span class="s2">&quot;ALL&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;Result &#39;C:\\Users\\Qiusheng\\Documents\\GEOG-312\\Lectures\\data\\Results\\buffer2.shp&#39;&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hard&#8208;coded-Parameters">Hard&#8208;coded Parameters<a class="anchor-link" href="#Hard&#8208;coded-Parameters">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">arcpy</span> 
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">workspace</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">overwriteOutput</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">Clip_analysis</span><span class="p">(</span><span class="s2">&quot;bike_routes.shp&quot;</span><span class="p">,</span><span class="s2">&quot;zip.shp&quot;</span><span class="p">,</span><span class="s2">&quot;Results/routes_clip.shp&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;Result &#39;C:\\Users\\Qiusheng\\Documents\\GEOG-312\\Lectures\\data\\Results\\routes_clip.shp&#39;&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Using-Variables-for-Parameters">Using Variables for Parameters<a class="anchor-link" href="#Using-Variables-for-Parameters">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">arcpy</span> 
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">workspace</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="n">infc</span> <span class="o">=</span> <span class="s2">&quot;bike_routes.shp&quot;</span>
+<span class="n">clipfc</span> <span class="o">=</span> <span class="s2">&quot;zip.shp&quot;</span>
+<span class="n">outfc</span> <span class="o">=</span> <span class="s2">&quot;Results/routes_clip.shp&quot;</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">Clip_analysis</span><span class="p">(</span><span class="n">infc</span><span class="p">,</span> <span class="n">clipfc</span><span class="p">,</span> <span class="n">outfc</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;Result &#39;C:\\Users\\Qiusheng\\Documents\\GEOG-312\\Lectures\\data\\Results\\routes_clip.shp&#39;&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Variables-Provided-by-a-User">Variables Provided by a User<a class="anchor-link" href="#Variables-Provided-by-a-User">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># import arcpy</span>
+<span class="c1"># infc = arcpy.GetParameterAsText(0)</span>
+<span class="c1"># outfc = arcpy.GetParameterAsText(1)</span>
+<span class="c1"># arcpy.Copy_management(infc, outfc)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Result-Objects">Result Objects<a class="anchor-link" href="#Result-Objects">&#182;</a></h2><p><strong>ArcPy returns the output of a tool as a Result object</strong></p>
+<p><a href="http://desktop.arcgis.com/en/arcmap/latest/analyze/arcpy-classes/result.htm">http://desktop.arcgis.com/en/arcmap/latest/analyze/arcpy-classes/result.htm</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">arcpy</span>
+<span class="n">data_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">workspace</span> <span class="o">=</span> <span class="n">data_dir</span>
+<span class="n">mycount</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">GetCount_management</span><span class="p">(</span><span class="s2">&quot;hospitals.shp&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mycount</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13210,11 +13677,724 @@ InstallTime   : 14:28:13
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>10.7.1
+<pre>48
 </pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">arcpy</span>
+<span class="n">data_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">workspace</span> <span class="o">=</span> <span class="n">data_dir</span>
+<span class="n">myresult</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">Clip</span> <span class="p">(</span><span class="s2">&quot;bike_routes.shp&quot;</span><span class="p">,</span><span class="s2">&quot;zip.shp&quot;</span><span class="p">,</span><span class="s2">&quot;Results/routes_clip.shp&quot;</span><span class="p">)</span> 
+<span class="k">print</span><span class="p">(</span><span class="n">myresult</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>C:\Users\Qiusheng\Documents\GEOG-312\Lectures\data\Results\routes_clip.shp
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Multiple-Operations-using-Result-Objects">Multiple Operations using Result Objects<a class="anchor-link" href="#Multiple-Operations-using-Result-Objects">&#182;</a></h2><p><strong>Result objects can be used as the input into another function</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">arcpy</span>
+<span class="n">data_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">workspace</span> <span class="o">=</span> <span class="n">data_dir</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">overwriteOutput</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="nb">buffer</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">Buffer_analysis</span><span class="p">(</span><span class="s2">&quot;hospitals.shp&quot;</span><span class="p">,</span><span class="s2">&quot;Results/buffer.shp&quot;</span><span class="p">,</span><span class="s2">&quot;1000 FEET&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;ALL&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">GetCount_management</span><span class="p">(</span><span class="nb">buffer</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Working-with-Licenses">Working with Licenses<a class="anchor-link" href="#Working-with-Licenses">&#182;</a></h2><p><strong>CheckProduct function</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">arcpy</span>
+<span class="k">print</span><span class="p">(</span><span class="n">arcpy</span><span class="o">.</span><span class="n">ProductInfo</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>ArcInfo
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>CheckExtension function</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">arcpy</span>
+<span class="n">data_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">workspace</span> <span class="o">=</span> <span class="n">data_dir</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">ListRasters</span><span class="p">()</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">overwriteOutput</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="k">if</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">CheckExtension</span><span class="p">(</span><span class="s2">&quot;3D&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;Available&quot;</span><span class="p">:</span>
+    <span class="n">arcpy</span><span class="o">.</span><span class="n">CheckOutExtension</span><span class="p">(</span><span class="s2">&quot;3D&quot;</span><span class="p">)</span>
+    <span class="n">arcpy</span><span class="o">.</span><span class="n">Slope_3d</span><span class="p">(</span><span class="s2">&quot;dem.tif&quot;</span><span class="p">,</span> <span class="s2">&quot;slope.tif&quot;</span><span class="p">,</span> <span class="s2">&quot;DEGREE&quot;</span><span class="p">)</span>
+    <span class="n">arcpy</span><span class="o">.</span><span class="n">CheckInExtension</span><span class="p">(</span><span class="s2">&quot;3D&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Slope image created!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;3D Analyst license is unavailable.&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Slope image created!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Working-with-Toolboxes">Working with Toolboxes<a class="anchor-link" href="#Working-with-Toolboxes">&#182;</a></h2><p><strong>Import a custom toolbox</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">arcpy</span>
+<span class="n">tbx_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="sa">r</span><span class="s2">&quot;data\toolbox\NACT.tbx&quot;</span><span class="p">)</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">ImportToolbox</span><span class="p">(</span><span class="n">tbx_path</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[21]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;module &#39;mytools&#39; (built-in)&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Define a custom toolbox alias</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">arcpy</span>
+<span class="n">tbx_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="sa">r</span><span class="s2">&quot;data\toolbox\NACT.tbx&quot;</span><span class="p">)</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">ImportToolbox</span><span class="p">(</span><span class="n">tbx_path</span><span class="p">,</span><span class="s2">&quot;mytools&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[22]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;module &#39;mytools&#39; (built-in)&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Access a tool in custom toolbox</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># arcpy.mytools.FeatureStatisticsToTable(Input_features, Input_zone_field, Input_value_raster)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># arcpy.FeatureStatisticsToTable_mytools(Input_features, Input_zone_field, Input_value_raster)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Access-Tool&#8217;s-Syntax">Access Tool&#8217;s Syntax<a class="anchor-link" href="#Access-Tool&#8217;s-Syntax">&#182;</a></h1><p><strong>Using the Usage function</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">arcpy</span>
+<span class="n">tools</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">ListTools</span><span class="p">(</span><span class="s2">&quot;*_analysis&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">tool</span> <span class="ow">in</span> <span class="n">tools</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">arcpy</span><span class="o">.</span><span class="n">Usage</span><span class="p">(</span><span class="n">tool</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Buffer_analysis(in_features, out_feature_class, buffer_distance_or_field, {FULL | LEFT | RIGHT | OUTSIDE_ONLY}, {ROUND | FLAT}, {NONE | ALL | LIST}, {dissolve_field;dissolve_field...}, {PLANAR | GEODESIC})
+
+Clip_analysis(in_features, clip_features, out_feature_class, {cluster_tolerance})
+
+Erase_analysis(in_features, erase_features, out_feature_class, {cluster_tolerance})
+
+Identity_analysis(in_features, identity_features, out_feature_class, {ALL | NO_FID | ONLY_FID}, {cluster_tolerance}, {NO_RELATIONSHIPS | KEEP_RELATIONSHIPS})
+
+Intersect_analysis(Features {Ranks};Features {Ranks}..., out_feature_class, {ALL | NO_FID | ONLY_FID}, {cluster_tolerance}, {INPUT | LINE | POINT})
+
+SymDiff_analysis(in_features, update_features, out_feature_class, {ALL | NO_FID | ONLY_FID}, {cluster_tolerance})
+
+Update_analysis(in_features, update_features, out_feature_class, {BORDERS | NO_BORDERS}, {cluster_tolerance})
+
+Split_analysis(in_features, split_features, split_field, out_workspace, {cluster_tolerance})
+
+Near_analysis(in_features, near_features;near_features..., {search_radius}, {NO_LOCATION | LOCATION}, {NO_ANGLE | ANGLE}, {PLANAR | GEODESIC})
+
+PointDistance_analysis(in_features, near_features, out_table, {search_radius})
+
+Select_analysis(in_features, out_feature_class, {where_clause})
+
+TableSelect_analysis(in_table, out_table, {where_clause})
+
+Frequency_analysis(in_table, out_table, frequency_fields;frequency_fields..., {summary_fields;summary_fields...})
+
+Statistics_analysis(in_table, out_table, Field {Statistic Type};Field {Statistic Type}..., {case_field;case_field...})
+
+CreateThiessenPolygons_analysis(in_features, out_feature_class, {ONLY_FID | ALL})
+
+SpatialJoin_analysis(target_features, join_features, out_feature_class, {JOIN_ONE_TO_ONE | JOIN_ONE_TO_MANY}, {KEEP_ALL | KEEP_COMMON}, {field_mapping}, {INTERSECT | INTERSECT_3D | WITHIN_A_DISTANCE_GEODESIC | WITHIN_A_DISTANCE | WITHIN_A_DISTANCE_3D | CONTAINS | COMPLETELY_CONTAINS | CONTAINS_CLEMENTINI | WITHIN | COMPLETELY_WITHIN | WITHIN_CLEMENTINI | ARE_IDENTICAL_TO | BOUNDARY_TOUCHES | SHARE_A_LINE_SEGMENT_WITH | CROSSED_BY_THE_OUTLINE_OF | HAVE_THEIR_CENTER_IN | CLOSEST_GEODESIC | CLOSEST}, {search_radius}, {distance_field_name})
+
+MultipleRingBuffer_analysis(Input_Features, Output_Feature_class, Distances;Distances..., {Default | Centimeters | DecimalDegrees | Feet | Inches | Kilometers | Meters | Miles | Millimeters | NauticalMiles | Points | Yards | Decimeters}, {Field_Name}, {ALL | NONE}, {FULL | OUTSIDE_ONLY})
+
+GenerateNearTable_analysis(in_features, near_features;near_features..., out_table, {search_radius}, {NO_LOCATION | LOCATION}, {NO_ANGLE | ANGLE}, {CLOSEST | ALL}, {closest_count}, {PLANAR | GEODESIC})
+
+Union_analysis(Features {Ranks};Features {Ranks}..., out_feature_class, {ALL | NO_FID | ONLY_FID}, {cluster_tolerance}, {GAPS | NO_GAPS})
+
+TabulateIntersection_analysis(in_zone_features, zone_fields;zone_fields..., in_class_features, out_table, {class_fields;class_fields...}, {sum_fields;sum_fields...}, {xy_tolerance}, {UNKNOWN | INCHES | FEET | YARDS | MILES | NAUTICAL_MILES | MILLIMETERS | CENTIMETERS | DECIMETERS | METERS | KILOMETERS | DECIMAL_DEGREES | POINTS | ARES | ACRES | HECTARES | SQUARE_INCHES | SQUARE_FEET | SQUARE_YARDS | SQUARE_MILES | SQUARE_MILLIMETERS | SQUARE_CENTIMETERS | SQUARE_DECIMETERS | SQUARE_METERS | SQUARE_KILOMETERS})
+
+PolygonNeighbors_analysis(in_features, out_table, {in_fields;in_fields...}, {NO_AREA_OVERLAP | AREA_OVERLAP}, {BOTH_SIDES | NO_BOTH_SIDES}, {cluster_tolerance}, {UNKNOWN | INCHES | POINTS | FEET | YARDS | MILES | NAUTICAL_MILES | MILLIMETERS | CENTIMETERS | METERS | KILOMETERS | DECIMETERS | DECIMAL_DEGREES}, {UNKNOWN | SQUARE_INCHES | SQUARE_FEET | SQUARE_YARDS | ACRES | SQUARE_MILES | SQUARE_MILLIMETERS | SQUARE_DECIMETERS | SQUARE_CENTIMETERS | SQUARE_METERS | SQUARE_KILOMETERS | ARES | HECTARES})
+
+SplitByAttributes_analysis(Input_Table, Target_Workspace, Split_Fields;Split_Fields...)
+
+GraphicBuffer_analysis(in_features, out_feature_class, buffer_distance_or_field, {SQUARE | BUTT | ROUND}, {MITER | BEVEL | ROUND}, {miter_limit}, {max_deviation})
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Using Python’s built-in help function</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">help</span><span class="p">(</span><span class="n">arcpy</span><span class="o">.</span><span class="n">Clip_analysis</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on function Clip in module arcpy.analysis:
+
+Clip(in_features=None, clip_features=None, out_feature_class=None, cluster_tolerance=None)
+    Clip_analysis(in_features, clip_features, out_feature_class, {cluster_tolerance})
+    
+       Extracts input features that overlay the clip features.Use this tool
+       to cut out a piece of one feature class using one or
+       more of the features in another feature class as a cookie cutter. This
+       is particularly useful for creating a new feature class-also referred
+       to as study area or area of interest (AOI)-that contains a geographic
+       subset of the features in another, larger feature class.
+    
+    INPUTS:
+     in_features (Feature Layer):
+         The features to be clipped.
+     clip_features (Feature Layer):
+         The features used to clip the input features.
+     cluster_tolerance {Linear unit}:
+         The minimum distance separating all feature coordinates as well as the
+         distance a coordinate can move in X or Y (or both). Set the value to
+         be higher for data with less coordinate accuracy and lower for data
+         with extremely high accuracy.
+    
+    OUTPUTS:
+     out_feature_class (Feature Class):
+         The feature class to be created.
+
+None
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="ArcPy-Functions">ArcPy Functions<a class="anchor-link" href="#ArcPy-Functions">&#182;</a></h2><ul>
+<li>All geoprocessing tools are ArcPy functions</li>
+<li>Additional ArcPy functions:<ul>
+<li>listing data</li>
+<li>Retrieving and setting properties</li>
+<li>Many more…</li>
+</ul>
+</li>
+<li>General syntax<ul>
+<li>arcpy.&lt; functionname&gt;(&lt; arguments&gt;)</li>
+</ul>
+</li>
+</ul>
+<p><a href="http://desktop.arcgis.com/en/arcmap/latest/analyze/arcpy-functions/alphabetical-list-of-arcpy-functions.htm">Alphabetical list of ArcPy functions</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">arcpy</span>
+<span class="n">data_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s1">&#39;zip.shp&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">arcpy</span><span class="o">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">file_path</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="ArcPy-Classes">ArcPy Classes<a class="anchor-link" href="#ArcPy-Classes">&#182;</a></h2><ul>
+<li>Some tool parameters are complicated/detailed<ul>
+<li>e.g. coordinate system</li>
+</ul>
+</li>
+<li>ArcPy classes are used to work with these parameters<ul>
+<li>Classes are used to create objects</li>
+<li>Classes have properties and methods</li>
+</ul>
+</li>
+<li>General syntax<ul>
+<li>arcpy.&lt; classname&gt;(&lt; parameters&gt;)</li>
+</ul>
+</li>
+</ul>
+<p><a href="http://desktop.arcgis.com/en/arcmap/latest/analyze/arcpy-classes/alphabetical-list-of-arcpy-classes.htm">Alphabetical list of ArcPy classes</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">arcpy</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">workspace</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="ArcPy-Classes:-Example">ArcPy Classes: Example<a class="anchor-link" href="#ArcPy-Classes:-Example">&#182;</a></h2><p><strong>The following example creates a spatial reference object based on an existing .prj file ‐ properties of this object can then be used</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">arcpy</span>
+<span class="n">data_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="n">prjfile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s1">&#39;facilities.prj&#39;</span><span class="p">)</span>  
+<span class="n">spatialref</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">SpatialReference</span><span class="p">(</span><span class="n">prjfile</span><span class="p">)</span> 
+<span class="n">myref</span> <span class="o">=</span> <span class="n">spatialref</span><span class="o">.</span><span class="n">name</span>
+<span class="k">print</span><span class="p">(</span><span class="n">myref</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>NAD_1983_StatePlane_Texas_Central_FIPS_4203_Feet
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>The following example creates a spatial reference object and use this to define the coordinate system of a new feature class</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">arcpy</span>
+<span class="n">data_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="n">out_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s1">&#39;Results&#39;</span><span class="p">)</span>
+<span class="n">prjfile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s1">&#39;facilities.prj&#39;</span><span class="p">)</span> 
+<span class="n">out_name</span> <span class="o">=</span> <span class="s2">&quot;lines.shp&quot;</span>
+<span class="n">spatialref</span> <span class="o">=</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">SpatialReference</span><span class="p">(</span><span class="n">prjfile</span><span class="p">)</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">CreateFeatureclass_management</span><span class="p">(</span><span class="n">out_dir</span><span class="p">,</span> <span class="n">out_name</span><span class="p">,</span> <span class="s2">&quot;POLYLINE&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">spatialref</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[30]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;Result &#39;C:\\Users\\Qiusheng\\Documents\\GEOG-312\\Lectures\\data\\Results\\lines.shp&#39;&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Environment-Settings">Environment Settings<a class="anchor-link" href="#Environment-Settings">&#182;</a></h2><p><strong>Set current workspace</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">arcpy</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">workspace</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="s1">&#39;data&#39;</span><span class="p">)</span>
+<span class="n">arcpy</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">cellSize</span> <span class="o">=</span> <span class="mi">30</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Get a complete list of properties</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">arcpy</span>
+<span class="k">print</span> <span class="n">arcpy</span><span class="o">.</span><span class="n">ListEnvironments</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[u&#39;newPrecision&#39;, u&#39;autoCommit&#39;, u&#39;XYResolution&#39;, u&#39;processingServerUser&#39;, u&#39;XYDomain&#39;, u&#39;processingServerPassword&#39;, u&#39;scratchWorkspace&#39;, u&#39;cartographicPartitions&#39;, u&#39;terrainMemoryUsage&#39;, u&#39;MTolerance&#39;, u&#39;compression&#39;, u&#39;coincidentPoints&#39;, u&#39;randomGenerator&#39;, u&#39;outputCoordinateSystem&#39;, u&#39;rasterStatistics&#39;, u&#39;ZDomain&#39;, u&#39;cellSizeProjectionMethod&#39;, u&#39;transferDomains&#39;, u&#39;maintainAttachments&#39;, u&#39;resamplingMethod&#39;, u&#39;snapRaster&#39;, u&#39;projectCompare&#39;, u&#39;cartographicCoordinateSystem&#39;, u&#39;configKeyword&#39;, u&#39;outputZFlag&#39;, u&#39;qualifiedFieldNames&#39;, u&#39;tileSize&#39;, u&#39;parallelProcessingFactor&#39;, u&#39;pyramid&#39;, u&#39;referenceScale&#39;, u&#39;processingServer&#39;, u&#39;extent&#39;, u&#39;XYTolerance&#39;, u&#39;tinSaveVersion&#39;, u&#39;nodata&#39;, u&#39;MDomain&#39;, u&#39;spatialGrid1&#39;, u&#39;cellSize&#39;, u&#39;outputZValue&#39;, u&#39;outputMFlag&#39;, u&#39;geographicTransformations&#39;, u&#39;spatialGrid2&#39;, u&#39;ZResolution&#39;, u&#39;mask&#39;, u&#39;spatialGrid3&#39;, u&#39;maintainSpatialIndex&#39;, u&#39;workspace&#39;, u&#39;MResolution&#39;, u&#39;derivedPrecision&#39;, u&#39;ZTolerance&#39;, u&#39;scratchGDB&#39;, u&#39;scratchFolder&#39;, u&#39;packageWorkspace&#39;, u&#39;addOutputsToMap&#39;, u&#39;buildStatsAndRATForTempRaster&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Set <em>overwriteOutput</em> property</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">arcpy</span>
+<span class="kn">from</span> <span class="nn">arcpy</span> <span class="kn">import</span> <span class="n">env</span>
+<span class="n">env</span><span class="o">.</span><span class="n">overwriteOutput</span> <span class="o">=</span> <span class="bp">True</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
