@@ -16,6 +16,7 @@ First Steps in GIS Programming
 * [Lecture 10 - File Handling and Exceptions](https://giswqs.github.io/geog-312/html/GEOG-312_Lecture_10_Files_and_Exceptions.html)
 * [Lecture 11 - Setting Up ArcPy](https://giswqs.github.io/geog-312/html/GEOG-312_Lecture_11_Setting_Up_ArcPy.html)
 * [Lecture 12 - Introducing Arcpy](https://giswqs.github.io/geog-312/html/GEOG-312_Lecture_12_Introducing_ArcPy.html)
+* [Lecture 13 - Exploring Spatial Data](https://giswqs.github.io/geog-312/html/GEOG-312_Lecture_13_Exploring_Spatial_Data.html)
 
 ## Labs
 
