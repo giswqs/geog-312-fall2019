@@ -28,3 +28,4 @@ First Steps in GIS Programming
 * [Lab 06](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_06.html)
 * [Lab 07](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_07.html)
 * [Lab 08](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_08.html)
+* [Lab 09](https://giswqs.github.io/geog-312/html/GEOG-312_Lab_09.html)
