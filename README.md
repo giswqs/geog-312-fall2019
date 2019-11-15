@@ -17,6 +17,8 @@ First Steps in GIS Programming
 * [Lecture 11 - Setting Up ArcPy](https://giswqs.github.io/geog-312/html/GEOG-312_Lecture_11_Setting_Up_ArcPy.html)
 * [Lecture 12 - Introducing Arcpy](https://giswqs.github.io/geog-312/html/GEOG-312_Lecture_12_Introducing_ArcPy.html)
 * [Lecture 13 - Exploring Spatial Data](https://giswqs.github.io/geog-312/html/GEOG-312_Lecture_13_Exploring_Spatial_Data.html)
+* [Lecture 14 - Introduction to GitHub](https://giswqs.github.io/geog-312/Lectures/GEOG-312_Lecture_14_GitHub_Intro.pdf)
+* [Lecture 15 - Creating Custom Tools](https://giswqs.github.io/geog-312/html/GEOG-312_Lecture_15_Creating_Custom_Tools.html)
 
 ## Labs
 
